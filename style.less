@@ -1,12 +1,99 @@
-body{
-	margin: auto;
-	width: 500px;
-	border:3px solid black;
-	padding: 15px;
+@import url("variable.less");
+ 
+@font-face {
+    font-family: Titre;
+    src: url(img/Starjedi.ttf);
 }
-h1{
-	text-align: center;
+
+.important, h1 {
+	font-weight: bold;
+	text-align : center;
 }
-article{
-	text-align: justify;
+.important, h2 {
+	color : @color-secondary;
+	font-family : Titre;
+}
+
+nav{
+	padding : 10px;
+}
+
+.argent{
+	height:20px !important;
+}
+
+@media (min-width: ~"@{size-mobile}") 
+{
+	main{
+		width: @size-mobile;
+		margin: auto;
+		border: 1px solid #412c2d;
+		padding: 10px;
+		background: @color-primary;
+		color : @color-white;
+		text-align : justify;
+		font-size : @font-mobile;
+	}
+
+	.imgR {
+		width: @size-mobile - 60px;
+		margin:0px 30px;
+	} 
+}
+
+@media (min-width: ~"@{size-tablet}") 
+{
+	main{
+		width: @size-tablet;
+		margin: auto;
+		border: 1px solid #412c2d;
+		padding: 10px;
+		background: @color-primary;
+		color : @color-white;  
+		text-align : justify;
+		font-size : @font-tablet;
+	} 
+
+	.imgR {
+		width: @size-tablet - 60px;
+		margin:0px 30px;
+	}   
+}
+
+@media (min-width: ~"@{size-desktop}") 
+{
+	main{
+		width: @size-desktop;
+		margin: auto;
+		border: 1px solid #412c2d;
+		padding: 10px;
+		background: @color-primary;
+		color : @color-white;
+		text-align : justify; 
+		font-size : @font-desktop;
+	} 
+
+	.imgR {
+		width: @size-desktop - 60px;
+		margin:0px 30px;
+	}  
+}
+
+@media (min-width: ~"@{size-large}") 
+{
+	main{
+		width: @size-large;
+		margin: auto;
+		border: 1px solid #412c2d;
+		padding: 10px;
+		background: @color-primary;
+		color : @color-white;  
+		text-align : justify; 
+		font-size : @font-large;
+	}  
+
+	.imgR {
+		width: @size-large - 60px;
+		margin:0px 30px;
+	} 
 }
